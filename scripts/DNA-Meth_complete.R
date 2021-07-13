@@ -1,9 +1,4 @@
-###########################################
-#  -Integrative bioinformatics            # 
-#  - RNA-Seq                              #
-#  - 2018- 12- 18                         #
-#  - Copyright: Mohamed Hamed             #
-###########################################
+
 # R version 3.4.1 (2017-06-30)
 # Platform: x86_64-apple-darwin15.6.0 (64-bit)
 # Running under: OS X El Capitan 10.11.6
