@@ -1,9 +1,4 @@
-# Integrative Bioinformatics Course 
-# Microarray Analysis Session
-# date: 16 December 2018
-# author: Mohamed Hamed
-# sessionInfo()
-# 
+ 
 # R version 3.5.1 (2018-07-02)
 # Platform: x86_64-pc-linux-gnu (64-bit)
 # Running under: Ubuntu 18.04.1 LTS
