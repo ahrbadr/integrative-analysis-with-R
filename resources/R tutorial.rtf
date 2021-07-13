@@ -1,0 +1,496 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset1 Segoe UI Symbol;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\ltrpar\sa200\sl276\slmult1\f0\fs22\lang9 ############################\par
+## general tutorial ########\par
+# 14.11.2020          ######\par
+\par
+# variables and values\par
+foo <- 3\par
+\par
+5 -> fum \par
+\par
+rm(fum)\par
+\par
+  y <- c(1,2 ,3 )\par
+  s = seq(3,10,length= 2)\par
+  A = 1:10\par
+\par
+\par
+#different form for assignment of values to variable\par
+\par
+# delete variable\par
+rm (fum)  # like delete on command line\par
+\par
+# creating vectors and combine between vectors\par
+v1 <- c(1, 2, 3) # we can ask them how to create it\par
+\par
+# if v1 contains different data types, will it be a vector or not?\par
+\par
+# answer : No because vector with same data type, it will be list that will be taken next time \par
+# like v1= list(c(1,"1",TRUE)), so c is not used for  vector only\par
+v2 <- c(4, 5, 6)\par
+\par
+# How to combine both Vectors??\par
+v3= c(v1,v2)\par
+print(v3)\par
+v3\par
+c(v1, v2) # combine the both \par
+c( v1, c(7,8,9))\par
+\par
+# append to V1 and ask them how they can be added\par
+# to V1 and V1 changed its value\par
+# by\par
+v1 <- c(v1, c(7,8,9))\par
+#or\par
+v <- c(1, 2, 3)\par
+v[4] = 42\par
+v[length(v) + 1] <- 50\par
+\par
+#or\par
+append(1:10, 99, after = 5)\par
+\par
+# revise seq,rep,arithmetic operation and converting between data types\par
+\par
+# How to compare between 2 vectors ?\par
+\par
+\par
+v1 == v2\par
+\par
+\par
+# assign names for each elements in vector\par
+years <- c(1960, 1964, 1976, 1994)\par
+names(years) <- c("Kennedy", "Johnson", "Carter", "Bosh")\par
+years\par
+\par
+# factor\par
+Gender = c("Female", "Male", "Male", "Male", "Female")\par
+factor(Gender)\par
+wday <- c("Wed", "Thu", "Mon", "Wed", "Thu",\par
+          "Thu", "Thu", "Tue", "Thu", "Tue")\par
+f <- factor(wday)\par
+f\par
+?factor\par
+\par
+# The function factor is used to encode a vector as a factor (the terms \f1\lquote\f0 category\f1\rquote  \f0\par
+\par
+\par
+######################################\par
+#get the working directory path\par
+getwd()\par
+# set the working directory path\par
+#setwd("pathname")\par
+\par
+help.start()\par
+?print\par
+help(print)\par
+# R as a calculator\par
+10 + 3\par
+10 - 3\par
+10 * 3\par
+10 * 3\par
+10 ^ 3  # or 10 **3\par
+\par
+#Modulus\par
+11 %% 3\par
+#integer division\par
+11 %/% 3\par
+\par
+11/3\par
+\par
+\par
+13 > 10 %% 3\par
+7 > 10 %/% 3\par
+\par
+\par
+#Order matters: PEMDAS:\par
+#P: parentheses (highest priority).\par
+#E: exponential\par
+#MD: Multiplication and Division\par
+#AS: Addition and Subtraction (lowest priority).\par
+2+5*3\par
+(2+5)^3\par
+(2+5)**3\par
+\par
+#Operators with the same precedence are evaluated from left to right\par
+6/3*2\par
+6/(3*2)\par
+\par
+\par
+#The modulo returns the remainder of the division of the number to the left by the number on its right, for example 5 modulo 3 or 5 %% 3 is 2.\par
+\par
+####################\par
+## Lab Task\par
+####################\par
+\par
+# four to the 3rd power divided by 2 ?\par
+# What is (8/4)x6?\par
+# What is the square root of 257 ?\par
+sqrt\par
+\par
+10/3\par
+10%%3\par
+10%/%3 \par
+#########################\par
+## Variable\par
+#########################\par
+# A variable is a name that can have a value, and this value has a type.\par
+# A value is bound to a name by the assignment operator \f1\ldblquote\f0 <- \f1\rdblquote  \f0 or \f1\ldblquote\f0 =\f1\rdblquote\f0\par
+x=1\par
+\par
+class(4)\par
+class("text")\par
+class(TRUE)\par
+class("TRUE")\par
+\par
+data = c(1:3)\par
+\par
+\par
+x <- 7\par
+base = 'A'\par
+seq <- 'ACGT'\par
+\par
+#A variable name can contain only letters, numbers, period \f1\ldblquote\f0 .\f1\rdblquote\f0 , and/or the underscore sign \f1\lquote\f0 _\f1\rquote\f0\par
+# It can not start with a number.  7slash\par
+# It can not be an R reserved keyword. (if, For , in , True)\par
+# It can start with a period \f1\ldblquote\f0 .\f1\rdblquote\f0 , but not to be followed with a number.\par
+\par
+# Assign the value 42 to x\par
+x <- 12\par
+weight=55\par
+# Add variables\par
+x+weight\par
+weigth_gain=weight + x\par
+\par
+#A vector:\par
+#  \f1\endash  is an ordered group of elements of the same value type,\par
+# \endash  has a single dimension,\par
+# \endash  length can vary.\par
+\par
+a <- c(1,2,5.3,6,-2,4) # numeric vector with length 6.\par
+b <- c("one","two","three") # character vector with length 3.\par
+c <- c(TRUE, FALSE) # logical vector with length 2.\par
+d <- 5 # numeric vector of length 1.\par
+\par
+# You can generate a vector of regularly spaced numbers by using \par
+# the sequence function or \par
+# the replication function\par
+\par
+w = seq(1, 60, length=11)\par
+# or\par
+1:10\par
+rep(1:13,2)\par
+# coinflip=rep(0:1,15)\par
+# days=rep(1:7,4,each=2)\par
+\par
+e <- seq(0, 1, length=11) # a vector of length 11 with 0.1 increments.\par
+f <- 3:7 # equivalent to f <- c(3,4,5,6,7)\par
+\par
+#####task\par
+\par
+#Make a vector reflecting the number of days in a month.\par
+\par
+#Operations on vectors\par
+a <- c(1, 2, 4)\par
+b <- c(3, 5, 6)\par
+c <- c(10, 20, 30, 40)\par
+a^2\par
+\par
+b + 0.5\par
+a + b\par
+a * b\par
+a+c   #??? Not the same length\par
+\par
+length(a)\par
+a[3]\par
+c[c(1,4)]\par
+c[-2]\par
+y = c(2,4,5)\par
+y^2\par
+\par
+# Checking Data Type \par
+#R has many built-in functions to check for the type of the data objects and \par
+#the type of the object values.\par
+\par
+#Object Type \par
+is.vector( ) \par
+is.matrix( )   \par
+is.data.frame( ) \par
+is.list( )\par
+\par
+# value type.\par
+is.numeric( ) \par
+is.integer( )\par
+is.double( )\par
+is.character( )\par
+is.logical( )\par
+isTRUE( )\par
+isFALSE( )\par
+is.na( )\par
+is.nan( )\par
+\par
+### Practice\par
+\par
+a <- c(1, 2, 5.3, 6, -2, 4)\par
+\par
+mode(a)\par
+class(a)\par
+is.vector(a) # data type.\par
+y <- NaN\par
+is.na(y)\par
+is.nan(y)\par
+\par
+###Data Type: Conversion\par
+#R has many built-in functions to convert from one value type to another.\par
+\par
+#Practice\par
+a <- c(1, 2, 5.3, 6, -2, 4)\par
+b <- as.character(a)\par
+b\par
+class(b)\par
+class(a)\par
+is.vector(a)\par
+is.numeric(b)\par
+is.numeric(a)\par
+\par
+# Relational Operators\par
+#Relational operators are used for making comparisons.\par
+#  \f2\u9679?\f1  \f0 Their output is a logical value.\par
+\par
+x <- 1\par
+y <- 2\par
+x == y \par
+x <= y\par
+\par
+w <- c(2, 8, 3)\par
+z <- c(6, 4, 1)\par
+w > z\par
+\par
+# Logical Operators\par
+\par
+# "AND" && returns TRUE when both comparisons are TRUE\par
+T & T\par
+T & F\par
+F & F\par
+\par
+\par
+\par
+# "Or" || returns TRUE if at least one comparison is TRUE\par
+T | T\par
+T | F\par
+F | F \par
+\par
+!F\par
+!T\par
+\par
+c(T, T, F) & c(T , F , F)\par
+c(T, T, F) | c(T , F , F)\par
+!c(T, T, F) \par
+\par
+\par
+# & Vs && , | vs ||\par
+c(T, T, F) && c(T , F , F)\par
+c(T, T, F) || c(T , F , F)\par
+\par
+#If vectors are compared, || and && compare only the first element of each vector, \par
+#while | and & compares each corresponding pair of elements separately.\par
+(1 < 2) && (1 > 3)\par
+(1 < 2) && (1 < 3)\par
+(1 < 2) || (1 > 3)\par
+\par
+# If vectors are compared, || and && compare only the first element of each vector, \par
+#while | and & compares each corresponding pair of elements separately.\par
+\par
+x <- c(T, F, T)\par
+y <- c(F, F, T)\par
+x && y\par
+x & y\par
+\par
+#What would the following set of R expressions return?\par
+!(5<3)\par
+# this line of code is the same as 5 >= 3\par
+(1 < 2) || (1 > 3)\par
+!((1 < 2) || (1 > 3))\par
+\par
+\par
+# Lab task\par
+x <- 5\par
+y <- 7\par
+!(!(x < 4) & !!!(y > 12))\par
+######################\par
+# EXTRA\par
+######################\par
+x = 4\par
+\par
+# Watch out: 3 < x < 7 to check if x is between 3 and 7 will not work; \par
+#you'll need 3 < x & x < 7 for that.\par
+\par
+facebook <- c(17, 7, 5, 16, 8, 13, 14)\par
+linkedin <- c(16, 9, 13, 5, 2, 17, 14)\par
+last <- tail(linkedin, 1)\par
+tail(linkedin)\par
+?tail\par
+# Is last under 5 or above 10?\par
+last < 5 | last >  10\par
+\par
+# Is last between 15 (exclusive) and 20 (inclusive)?\par
+15 < last & last <=20\par
+\par
+# linkedin exceeds 10 but facebook below 10\par
+linkedin > 10 & facebook < 10\par
+linkedin[linkedin > 10 ]\par
+facebook[facebook< 10]\par
+\par
+# When is facebook between 11 (exclusive) and 14 (inclusive)?\par
+facebook > 11 & facebook <= 14\par
+\par
+# The which( ) function returns the index of the element that matches the\par
+# search criterion.\par
+y <- c(3, 2, 7)\par
+which(y == 3)\par
+which(y < 4)\par
+# check out \par
+y[which(y < 4)]\par
+y <- c(3, -2, 7, 1)\par
+which.max(y)\par
+which.min(y)\par
+\par
+\par
+# any, all function\par
+v <- c(3, pi, 4)\par
+\par
+\par
+any(v == pi) # Return TRUE if any element of v equals pi\par
+all(v == 0)  # return TRUE if all elements of v equals 0\par
+\par
+# unique \par
+a <- c(1, 1, 2, 3, 4, 2, -1)\par
+unique(a)\par
+\par
+######################################\par
+######### Importing data in R \par
+######################################\par
+# Basic Utils Packages: \par
+\par
+\par
+# For coma Separated file\par
+# the first argument is the path you define to import data from \par
+# if the file in the current working directory, simply passing the name will work \par
+# if the file located somewhere else, specify the pathe with file.path\par
+\par
+getwd()\par
+setwd("/home/hagar/Examples")\par
+\par
+pools = read.csv("swimming_pools.csv") \par
+str(pools)\par
+View(pools)\par
+head(pools)\par
+#or \par
+path = file.path("/home/hagar/Examples/swimming_pools.csv")\par
+pools_1 = read.csv(path) \par
+\par
+#stringsAsFactors, you can tell R whether it should convert strings in the flat file to factors.\par
+#For all importing functions in the utils package, this argument is TRUE\par
+#If you set stringsAsFactors to FALSE, the data frame columns corresponding to strings in your text file \par
+#will be character.\par
+\par
+# Use read.csv() to import the data in "swimming_pools.csv" as a data frame called pools; \par
+# make sure that strings are imported as characters, not as factors.\par
+pools <- read.csv("swimming_pools.csv")\par
+pools <- read.csv("swimming_pools.csv", stringsAsFactors = FALSE)\par
+str(pools)\par
+\par
+# for tab delimeted files, use read.delim\par
+\par
+# You can import these functions with read.delim(). By default, it sets the sep argument to "\\t" (fields in a record are delimited by tabs) and the header argument to TRUE (the first row contains the field names).\par
+# Import hotdogs.txt: hotdogs\par
+potatoes <- read.delim("potatoes.txt", header = FALSE)\par
+\par
+\par
+# Summarize hotdogs\par
+summary(hotdogs)\par
+#hotdogs <- read.delim("hotdogs.txt", header = FALSE)\par
+\par
+#If you're dealing with more exotic flat file formats, you'll want to use read.table(). \par
+#It's the most basic importing function; you can specify tons of different arguments in this function.\par
+#Unlike read.csv() and read.delim(), the header argument defaults to FALSE and the sep argument is "" by default.\par
+\par
+path <- file.path("hotdogs.txt")\par
+\par
+# Import the hotdogs.txt file: hotdogs\par
+hotdogs <- read.table(path, \par
+                      sep = "\\t", \par
+                      col.names = c("type", "calories", "sodium"))\par
+# Call head() on hotdogs\par
+head(hotdogs)\par
+############################################################################\par
+install.packages("readr")\par
+\par
+# Load the readr package\par
+library(readr)\par
+\par
+# Import potatoes.csv with read_csv(): \par
+potatoes <- read_csv("potatoes.csv")\par
+# or For TSV files use , read_tsv # remember unlike CSV, TSV has no header\par
+\par
+# Column names\par
+properties <- c("area", "temp", "size", "storage", "method",\par
+                "texture", "flavor", "moistness")\par
+\par
+# Import potatoes.txt: potatoes\par
+potatoes <- read_tsv("potatoes.txt", col_names = properties)\par
+\par
+potatoes <- read_delim("potatoes.txt", "\\t", \par
+                       escape_double = FALSE, trim_ws = TRUE)\par
+?read.delim\par
+\par
+# Call head() on potatoes\par
+head(potatoes)\par
+\par
+#read_delim() is the main readr function.\par
+#read_delim() takes two mandatory arguments:\par
+  #file: the file that contains the data\par
+  #delim: the character that separates the values in the data file\par
+\par
+# Column names\par
+properties <- c("area", "temp", "size", "storage", "method",\par
+                "texture", "flavor", "moistness")\par
+\par
+# Import potatoes.txt using read_delim(): potatoes\par
+potatoes <- read_delim("potatoes.txt", delim = "\\t", col_names = properties)\par
+\par
+# Print out potatoes\par
+potatoes\par
+##########################################################################\par
+\par
+# How to export files in Rdata \par
+\par
+# Saving on object in RData format\par
+save(hotdogs, file = "Hotdogs.RData")\par
+# Save multiple objects\par
+save(hotdogs, potatoes, file = "ALL.RData")\par
+\par
+\par
+\par
+\par
+# To load the data again\par
+load("ALL.RData")\par
+\par
+#Save your entire workspace\par
+save.image(file = "my_work_space.RData")\par
+\par
+\par
+#Use version() to discover the version of Bioconductor currently in use.\par
+\par
+if (!requireNamespace("BiocManager", quietly = TRUE))\par
+  install.packages("BiocManager")\par
+BiocManager::install(version = "3.10")\par
+\par
+BiocManager::version()\par
+\par
+BiocManager::install("GenomicRanges")\par
+\par
+\par
+# references \par
+# R Cookbook 2nd Edition\par
+}
+ 
